@@ -1,35 +1,414 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio - Home</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Iguosa Aghahowa | IT Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(120deg, #0f0f0f, #1a1a1a, #0c0c0c);
+      color: #e0e0e0;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* FLOATING BACKGROUND */
+    .bg-orbs span {
+      position: fixed;
+      width: 300px;
+      height: 300px;
+      background: rgba(0, 245, 255, 0.08);
+      border-radius: 50%;
+      animation: float 20s infinite linear;
+      z-index: -1;
+    }
+
+    .bg-orbs span:nth-child(1) { top: 10%; left: 10%; animation-duration: 25s; }
+    .bg-orbs span:nth-child(2) { top: 60%; left: 70%; animation-duration: 30s; }
+    .bg-orbs span:nth-child(3) { top: 30%; left: 40%; animation-duration: 20s; }
+
+    @keyframes float {
+      from { transform: translateY(0) translateX(0); }
+      to { transform: translateY(-200px) translateX(200px); }
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      z-index: 1000;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    nav h1 {
+      font-size: 22px;
+      color: #00f5ff;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #e0e0e0;
+      font-weight: 500;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    nav ul li a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #00f5ff;
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    nav ul li a:hover {
+      color: #00f5ff;
+      text-shadow: 0 0 5px #00f5ff;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+      background: radial-gradient(circle at top, #101820, #050505);
+    }
+
+    .hero h2 {
+      font-size: 52px;
+      margin-bottom: 20px;
+      color: #00f5ff;
+      animation: glow 2s infinite alternate;
+    }
+
+    .hero h2 span {
+      color: white;
+    }
+
+    .hero p {
+      max-width: 750px;
+      margin: auto;
+      line-height: 1.8;
+      font-size: 18px;
+      color: #cccccc;
+      animation: fadeUp 2s ease;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #00f5ff; }
+      to { text-shadow: 0 0 25px #00f5ff; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 100px 10%;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: 1s ease;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    section h3 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #00f5ff;
+      border-left: 4px solid #00f5ff;
+      padding-left: 15px;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 25px;
+      border-radius: 20px;
+      transition: 0.4s;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -100%;
+      left: -100%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(0,245,255,0.15), transparent);
+      transition: 0.5s;
+    }
+
+    .card:hover::before {
+      top: 0;
+      left: 0;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 0 35px rgba(0, 255, 255, 0.4);
+    }
+
+    .card h4 {
+      margin-bottom: 15px;
+      color: #00f5ff;
+    }
+
+    .card p, .card ul {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #dddddd;
+    }
+
+    .card ul {
+      padding-left: 20px;
+    }
+
+    /* CONTACT */
+    .contact {
+      text-align: center;
+      background: linear-gradient(180deg, #050505, #101820);
+    }
+
+    .contact p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .contact a {
+      color: #00f5ff;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #888;
+      font-size: 14px;
+    }
+
+    @media(max-width: 600px) {
+      .hero h2 { font-size: 32px; }
+      nav { flex-direction: column; gap: 10px; }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>Welcome to My Professional Portfolio</h1>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="skills.html">Skills & Achievements</a>
-        <a href="work.html">Work Examples</a>
-        <a href="learning.html">Learning Log</a>
-    </nav>
-    <div class="container">
-        <div class="profile-section">
-            <div class="profile-text">
-                <h2>Personal Profile</h2>
-                <p>I am [Your Year of Study]-year Computer Science student passionate about [Your Interests]. My academic journey has equipped me with strong programming skills in languages such as [Programming Languages], as well as experience in [Relevant Areas like web development, database management].</p>
-                <p>I enjoy [What You Enjoy Doing] and have worked on projects involving [Project Types or Technologies]. My goal is to contribute to [Your Career Goals or Aspirations]. I am eager to apply my skills in real-world scenarios and continue learning in a dynamic professional environment.</p>
-                <h3>Connect with Me</h3>
-                <p><strong>GitHub:</strong> <a href="[Your GitHub URL]">[Your GitHub Username]</a></p>
-                <p><strong>LinkedIn:</strong> <a href="[Your LinkedIn URL]">[Your LinkedIn Name]</a></p>
-            </div>
-            <div class="profile-image">
-                <img src="professional-headshot-placeholder.png" alt="Professional Headshot Placeholder">
-            </div>
-        </div>
+
+  <!-- FLOATING BACKGROUND -->
+  <div class="bg-orbs">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav>
+    <h1>Iguosa Aghahowa</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Work Examples</a></li>
+      <li><a href="#learning">Learning Log</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HOME -->
+  <div class="hero" id="home">
+    <div>
+      <h2>I'm <span>Iguosa Aghahowa</span>, a Future IT Professional</h2>
+      <p>
+        I am an undergraduate Computer Science student and NHS Healthcare Assistant with a strong commitment to
+        personal growth, professional integrity, and lifelong learning. My long-term goal is to transition into
+        the IT industry, where I can apply technical knowledge, problem-solving abilities, and compassionate values
+        to create reliable and user-focused digital solutions. I believe in honesty, resilience, and empathy as
+        the foundation for both professional excellence and meaningful teamwork.
+      </p>
     </div>
+  </div>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h3>Skills & Achievements</h3>
+    <div class="card-container">
+      <div class="card">
+        <h4>Technical Skills</h4>
+        <ul>
+          <li>HTML & CSS fundamentals for structured and accessible websites</li>
+          <li>Basic programming concepts using Python</li>
+          <li>GitHub and version control for portfolio deployment</li>
+          <li>IT infrastructure and system fundamentals</li>
+          <li>Logical problem-solving through academic projects</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h4>Professional Skills</h4>
+        <ul>
+          <li>Communication through blogging and documentation</li>
+          <li>Critical thinking via text annotation</li>
+          <li>Time management in healthcare and academic settings</li>
+          <li>Team collaboration within NHS multidisciplinary teams</li>
+          <li>Adaptability in high-pressure environments</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h4>Core Values</h4>
+        <ul>
+          <li>Honesty, Integrity & Authenticity</li>
+          <li>Compassion, Kindness & Empathy</li>
+          <li>Courage & Professional Resilience</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h3>Work Examples</h3>
+    <div class="card-container">
+      <div class="card">
+        <h4>Professional Portfolio Website</h4>
+        <p>
+          Designed and deployed a personal IT portfolio using GitHub Pages and HTML.
+          Demonstrates structured content design, version control, and professional digital presence.
+        </p>
+      </div>
+
+      <div class="card">
+        <h4>Academic Reading & Blogging</h4>
+        <p>
+          Maintained reading logs and blogs to critically evaluate texts, improving written communication
+          and digital content organization.
+        </p>
+      </div>
+
+      <div class="card">
+        <h4>Text Annotation & Headlines</h4>
+        <p>
+          Strengthened attention to detail and analytical thinking by annotating academic material
+          and creating professional summaries and headlines.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEARNING LOG -->
+  <section id="learning">
+    <h3>Learning Log (CPD)</h3>
+    <div class="card-container">
+      <div class="card">
+        <h4>HTML & Web Development</h4>
+        <p><strong>Hours:</strong> 6</p>
+        <p>
+          Learned semantic structure, accessibility principles, and layout design for professional websites.
+        </p>
+      </div>
+
+      <div class="card">
+        <h4>GitHub & Version Control</h4>
+        <p><strong>Hours:</strong> 5</p>
+        <p>
+          Created repositories, managed commits, and deployed a live website using GitHub Pages.
+        </p>
+      </div>
+
+      <div class="card">
+        <h4>IT Career Research</h4>
+        <p><strong>Hours:</strong> 4</p>
+        <p>
+          Explored IT support and development career paths and aligned skills with employer expectations.
+        </p>
+      </div>
+
+      <div class="card">
+        <h4>Transferable Skills Reflection</h4>
+        <p><strong>Hours:</strong> 3</p>
+        <p>
+          Connected healthcare experience with IT roles, focusing on user support, teamwork, and reliability.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h3>Contact Information</h3>
+    <p><strong>Name:</strong> Iguosa Aghahowa</p>
+    <p><strong>Email:</strong> <a href="mailto:Iguosaaghahowa@yahoo.com">Iguosaaghahowa@yahoo.com</a></p>
+    <p><strong>Phone:</strong> 07495 072722</p>
+    <p><strong>Career Goal:</strong> Transitioning into the IT industry from healthcare</p>
+  </section>
+
+  <footer>
+    © 2026 Iguosa Aghahowa | Professional IT Portfolio | Powered by GitHub Pages
+  </footer>
+
+  <script>
+    // SCROLL ANIMATION
+    const sections = document.querySelectorAll("section");
+
+    window.addEventListener("scroll", () => {
+      const trigger = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if (top < trigger) {
+          section.classList.add("show");
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
