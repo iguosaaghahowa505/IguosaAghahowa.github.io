@@ -3,83 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning Log - Iguosa Aghahowa</title>
+    <title>Learning Log | Iguosa Aghahowa</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Learning Log</h1>
-    </header>
-    
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="skills.html">Skills & Achievements</a>
-        <a href="work.html">Projects</a>
-        <a href="learning.html">Learning Log</a>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    <canvas id="particles"></canvas>
+
+    <nav class="modern-nav">
+        <div class="nav-brand">Iguosa Aghahowa</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="skills.html" class="nav-link">Skills</a></li>
+            <li><a href="work.html" class="nav-link">Projects</a></li>
+            <li><a href="learning.html" class="nav-link active">Learning</a></li>
+        </ul>
     </nav>
-    
-    <div class="container">
-        <h2>Continuous Professional Development Journey</h2>
-        <p><strong>Total CPD Hours: 30 hours</strong> (Target: 10-30 hours)</p>
-        <p><em>All activities completed between October 2025 - January 2026</em></p>
 
-        <h3>Activity 1: Portfolio Website Development</h3>
-        <div class="blog-entry">
-            <p><strong>Date:</strong> 15-17 January 2026</p>
-            <p><strong>Description:</strong> Built a complete professional portfolio website using GitHub Pages, HTML, and CSS. Learned web deployment, version control, and responsive design principles.</p>
-            <p><strong>Key Learnings:</strong> Understanding of GitHub Pages deployment, HTML5 semantics, CSS styling, and professional web presentation.</p>
-            <p><strong>Reflection:</strong> This project was challenging initially as I had limited web development experience. However, successfully deploying my portfolio gave me confidence in my ability to learn new technologies independently. The most valuable insight was realizing how my healthcare background gives me a unique perspective in tech.</p>
-            <p><strong>Hours:</strong> 6</p>
+    <section class="section">
+        <h2>Continuous Professional Development</h2>
+        <div class="cpd-summary">
+            <div class="summary-card"><div class="summary-number">30</div><div class="summary-label">Total Hours</div></div>
+            <div class="summary-card"><div class="summary-number">7</div><div class="summary-label">Activities</div></div>
+            <div class="summary-card"><div class="summary-number">100%</div><div class="summary-label">Target Achieved</div></div>
         </div>
 
-        <h3>Activity 2: Python Programming Practice</h3>
-        <div class="blog-entry">
-            <p><strong>Date:</strong> 10-14 January 2026</p>
-            <p><strong>Description:</strong> Completed Python exercises focusing on data structures, file handling, and basic automation. Created a reading log analyzer script.</p>
-            <p><strong>Key Learnings:</strong> Improved understanding of Python syntax, file I/O operations, and practical application of programming to solve personal workflow challenges.</p>
-            <p><strong>Reflection:</strong> Practicing Python reinforced my university learning and helped me see the practical value of coding. The reading log analyzer project connected my hobby (book blogging) with technical skills, making learning more relevant and engaging.</p>
-            <p><strong>Hours:</strong> 5</p>
-        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header"><h3>Portfolio Website Development</h3><span class="timeline-date">15-17 Jan 2026</span></div>
+                    <div class="timeline-body"><p><strong>Duration:</strong> 6 hours</p><p><strong>What Happened:</strong> Built portfolio with HTML/CSS, learned GitHub Pages deployment</p><p><strong>Reflection:</strong> First major web project, gained confidence, realized healthcare background gives unique perspective</p><p><strong>Next Steps:</strong> Learn JavaScript for interactivity</p></div>
+                </div>
+            </div>
 
-        <h3>Activity 3: Technical Documentation & Annotation</h3>
-        <div class="blog-entry">
-            <p><strong>Date:</strong> 05-12 January 2026</p>
-            <p><strong>Description:</strong> Developed a systematic approach to annotating technical blogs and programming tutorials. Created structured study notes and headline summaries.</p>
-            <p><strong>Key Learnings:</strong> Enhanced retention of technical concepts, improved ability to summarize complex information, and developed personal knowledge management system.</p>
-            <p><strong>Reflection:</strong> My book blogging skills transferred perfectly to technical learning. Creating headlines for technical concepts helped me understand them better. This systematic approach improved my learning efficiency by approximately 40% and will be invaluable throughout my career.</p>
-            <p><strong>Hours:</strong> 4</p>
-        </div>
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header"><h3>Python Programming Practice</h3><span class="timeline-date">10-14 Jan 2026</span></div>
+                    <div class="timeline-body"><p><strong>Duration:</strong> 5 hours</p><p><strong>What Happened:</strong> Completed exercises, created reading log analyzer script</p><p><strong>Reflection:</strong> Connected hobby with technical skills, saw practical value of coding</p><p><strong>Next Steps:</strong> Build advanced Python projects</p></div>
+                </div>
+            </div>
 
-        <h3>Activity 4: Content Creation & Communication</h3>
-        <div class="blog-entry">
-            <p><strong>Date:</strong> 01-07 January 2026</p>
-            <p><strong>Description:</strong> Refined content creation process for technical and non-technical audiences. Practiced creating engaging headlines and structured summaries for programming concepts.</p>
-            <p><strong>Key Learnings:</strong> Improved technical writing skills, ability to explain complex topics simply, and developed consistent blogging workflow.</p>
-            <p><strong>Reflection:</strong> This activity strengthened my communication skills, which are crucial for IT roles. The ability to document code and explain technical decisions is highly valued in software development teams.</p>
-            <p><strong>Hours:</strong> 3</p>
-        </div>
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header"><h3>Technical Documentation System</h3><span class="timeline-date">05-12 Jan 2026</span></div>
+                    <div class="timeline-body"><p><strong>Duration:</strong> 4 hours</p><p><strong>What Happened:</strong> Developed annotation methodology, created structured study notes</p><p><strong>Reflection:</strong> Book blogging skills transferred to tech learning, 40% efficiency gain</p><p><strong>Next Steps:</strong> Create digital knowledge base</p></div>
+                </div>
+            </div>
 
-        <h3>Activity 5: Health Tech Industry Research</h3>
-        <div class="blog-entry">
-            <p><strong>Date:</strong> 18-20 January 2026</p>
-            <p><strong>Description:</strong> Researched Health Tech industry trends, EHR systems, and digital health innovations. Studied how technology is transforming healthcare delivery.</p>
-            <p><strong>Key Learnings:</strong> Understanding of Health Tech landscape, key technologies (telemedicine, EHR, AI diagnostics), and career opportunities combining healthcare and IT.</p>
-            <p><strong>Reflection:</strong> This research clarified my career direction. My NHS experience gives me domain knowledge that many IT professionals lack, making me uniquely valuable for Health Tech roles. I identified specific skills I need to develop.</p>
-            <p><strong>Hours:</strong> 4</p>
-        </div>
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header"><h3>Health Tech Industry Research</h3><span class="timeline-date">18-20 Jan 2026</span></div>
+                    <div class="timeline-body"><p><strong>Duration:</strong> 4 hours</p><p><strong>What Happened:</strong> Researched EHR systems, telemedicine, digital health trends</p><p><strong>Reflection:</strong> Clarified career direction, identified domain knowledge advantage from NHS</p><p><strong>Next Steps:</strong> Enroll in Health Tech certification</p></div>
+                </div>
+            </div>
 
-        <h3>Activity 6: Future Development Plans</h3>
-        <div class="blog-entry">
-            <p><strong>Date:</strong> Ongoing</p>
-            <p><strong>Next Steps:</strong></p>
-            <ul>
-                <li>JavaScript Fundamentals Course (8 hours planned)</li>
-                <li>React.js Basics (5 hours planned)</li>
-                <li>Health Tech Certification (6 hours planned)</li>
-                <li>Open Source Contribution (5 hours planned)</li>
-            </ul>
-            <p><strong>Goal:</strong> Reach 50+ total CPD hours by March 2026, build 3 portfolio projects, and gain Health Tech industry knowledge.</p>
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header"><h3>JavaScript Fundamentals</h3><span class="timeline-date">20-22 Jan 2026</span></div>
+                    <div class="timeline-body"><p><strong>Duration:</strong> 5 hours</p><p><strong>What Happened:</strong> Completed course on DOM manipulation and event handling</p><p><strong>Reflection:</strong> Understood interactive web development, ready for dynamic projects</p><p><strong>Next Steps:</strong> Build interactive portfolio features</p></div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header"><h3>GitHub & Version Control</h3><span class="timeline-date">16 Jan 2026</span></div>
+                    <div class="timeline-body"><p><strong>Duration:</strong> 3 hours</p><p><strong>What Happened:</strong> Created repositories, practiced commits and branching</p><p><strong>Reflection:</strong> Ready for team coding environments, improved documentation skills</p><p><strong>Next Steps:</strong> Contribute to open-source projects</p></div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header"><h3>Future Development Plan</h3><span class="timeline-date">Ongoing</span></div>
+                    <div class="timeline-body"><p><strong>Planned Activities:</strong> React.js (8hrs), Health Tech Certification (6hrs), Python Projects (8hrs), Open Source (5hrs)</p><p><strong>Goal:</strong> Reach 50+ CPD hours, build 3 production projects, secure internship</p></div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
