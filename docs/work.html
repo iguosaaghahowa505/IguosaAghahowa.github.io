@@ -3,58 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Iguosa Aghahowa</title>
+    <title>Projects | Iguosa Aghahowa</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Projects</h1>
-    </header>
-    
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="skills.html">Skills & Achievements</a>
-        <a href="work.html">Projects</a>
-        <a href="learning.html">Learning Log</a>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    <canvas id="particles"></canvas>
+
+    <nav class="modern-nav">
+        <div class="nav-brand">Iguosa Aghahowa</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="skills.html" class="nav-link">Skills</a></li>
+            <li><a href="work.html" class="nav-link active">Projects</a></li>
+            <li><a href="learning.html" class="nav-link">Learning</a></li>
+        </ul>
     </nav>
-    
-    <div class="container">
-        <h2>Portfolio Development Project</h2>
-        <div class="project">
-            <h3>Professional IT Portfolio Website</h3>
-            <p><strong>Description:</strong> Built a complete professional portfolio website from scratch to showcase my career transition from healthcare to IT. The site features a clean, professional design with four distinct sections covering personal profile, skills, projects, and learning journey.</p>
-            <p><strong>Technologies Used:</strong> HTML5, CSS3, GitHub Pages</p>
-            <p><strong>Links:</strong> <a href="https://IguosaAghahowa.github.io" target="_blank">Live Portfolio</a> | <a href="https://olympus.ntu.ac.uk/IguosaAghahowa/IguosaAghahowa.github.io" target="_blank">GitHub Repository</a></p>
-            <p><strong>Explanation:</strong> This project demonstrates foundational web development skills, version control usage, and professional presentation capabilities - all essential for modern IT roles.</p>
-            <p><strong>Context:</strong> Developed as part of COMP10111 coursework, with self-directed learning of HTML/CSS through online resources and university materials.</p>
-        </div>
 
-        <h2>Data Management Projects</h2>
-        <div class="project">
-            <h3>Reading Log Analyzer</h3>
-            <p><strong>Description:</strong> Python script that analyzes my reading log data to track patterns, reading frequency, and genre preferences. Creates visual summaries and generates insights about reading habits.</p>
-            <p><strong>Technologies Used:</strong> Python, pandas, matplotlib</p>
-            <p><strong>Links:</strong> <a href="https://olympus.ntu.ac.uk/IguosaAghahowa/python-projects" target="_blank">GitHub Repository</a></p>
-            <p><strong>Explanation:</strong> Demonstrates practical application of programming to solve real-world problems and data analysis skills.</p>
-            <p><strong>Context:</strong> Personal project combining my hobby of book blogging with technical skills development. Currently in development with plans to add more features.</p>
-        </div>
+    <section class="section">
+        <h2>Featured Projects</h2>
+        
+        <div class="projects-grid">
+            <div class="project-card featured">
+                <div class="project-banner">🏆 Featured</div>
+                <div class="project-header">
+                    <h3>Professional IT Portfolio Website</h3>
+                    <div class="tech-stack">
+                        <span class="tech-badge">HTML5</span>
+                        <span class="tech-badge">CSS3</span>
+                        <span class="tech-badge">GitHub Pages</span>
+                        <span class="tech-badge">Dark Theme</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <p>Built a complete professional portfolio website from scratch to showcase my transition from healthcare to IT. Features modern dark theme, smooth animations, and responsive design.</p>
+                    <ul>
+                        <li>Responsive design optimized for all devices</li>
+                        <li>Hosted on NTU's Enterprise GitHub (Olympus)</li>
+                        <li>Showcases transferable skills from healthcare</li>
+                        <li>Includes comprehensive learning log</li>
+                    </ul>
+                </div>
+                <div class="project-actions">
+                    <a href="https://IguosaAghahowa.github.io" class="btn-primary" target="_blank">View Live</a>
+                    <a href="https://olympus.ntu.ac.uk/IguosaAghahowa/IguosaAghahowa.github.io" class="btn-secondary" target="_blank">View Code</a>
+                </div>
+            </div>
 
-        <div class="project">
-            <h3>Technical Documentation System</h3>
-            <p><strong>Description:</strong> A systematic approach to documenting technical learning through annotated texts, structured notes, and headline creation. Built using my experience in book blogging adapted for technical content.</p>
-            <p><strong>Technologies Used:</strong> Markdown, Notion, Python (for text processing)</p>
-            <p><strong>Explanation:</strong> Shows ability to create and maintain documentation - a critical skill in software development and IT roles.</p>
-            <p><strong>Context:</strong> Developed through consistent practice of annotating programming tutorials, Python documentation, and technical blogs. This system has improved my learning efficiency by approximately 40%.</p>
-        </div>
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Reading Log Analyzer</h3>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Data Analysis</span>
+                        <span class="tech-badge">Automation</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <p>Python script that analyzes reading log data to track patterns, reading frequency, and genre preferences. Creates visual summaries and generates insights about reading habits.</p>
+                    <ul>
+                        <li>Practical application of programming skills</li>
+                        <li>Combines hobby with technical skills</li>
+                        <li>Demonstrates data analysis capabilities</li>
+                    </ul>
+                </div>
+                <div class="project-actions">
+                    <a href="https://olympus.ntu.ac.uk/IguosaAghahowa/python-projects" class="btn-primary" target="_blank">View Repository</a>
+                </div>
+            </div>
 
-        <h2>Content Creation Projects</h2>
-        <div class="project">
-            <h3>Dual-Language Learning Framework</h3>
-            <p><strong>Description:</strong> Personalized methodology for learning technical concepts using dual-language books and resources. Combines English technical documentation with dual-language reading strategies for enhanced comprehension.</p>
-            <p><strong>Technologies Used:</strong> Study frameworks, annotation tools</p>
-            <p><strong>Explanation:</strong> Demonstrates innovative learning approaches and adaptability - key traits for continuous professional development in tech.</p>
-            <p><strong>Context:</strong> Evolved from my experience with dual-language books applied to technical learning. Particularly useful for understanding complex programming concepts.</p>
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Technical Documentation System</h3>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Documentation</span>
+                        <span class="tech-badge">Knowledge Management</span>
+                        <span class="tech-badge">Best Practices</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <p>A systematic approach to documenting technical learning through annotated texts, structured notes, and headline creation. Built using my experience in book blogging adapted for technical content.</p>
+                    <ul>
+                        <li>Improved learning efficiency by ~40%</li>
+                        <li>Creates reusable study resources</li>
+                        <li>Demonstrates documentation skills</li>
+                    </ul>
+                </div>
+                <div class="project-actions">
+                    <a href="learning.html" class="btn-secondary">View Details</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Dual-Language Learning Framework</h3>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Self-Learning</span>
+                        <span class="tech-badge">Innovation</span>
+                        <span class="tech-badge">Study Methods</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <p>Personalized methodology for learning technical concepts using dual-language books and resources. Combines English technical documentation with dual-language reading strategies for enhanced comprehension.</p>
+                    <ul>
+                        <li>Innovative learning approach</li>
+                        <li>Particularly useful for complex concepts</li>
+                        <li>Demonstrates adaptability</li>
+                    </ul>
+                </div>
+                <div class="project-actions">
+                    <span class="btn-secondary">Research Project</span>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
