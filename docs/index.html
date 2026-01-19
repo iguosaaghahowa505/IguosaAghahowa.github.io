@@ -7,22 +7,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Iguosa Aghahowa</h1>
-        <p>Computer Science Undergraduate | HCA Assistant @ NHS | Future IT Professional</p>
-    </header>
-    
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="skills.html">Skills & Achievements</a>
-        <a href="work.html">Projects</a>
-        <a href="learning.html">Learning Log</a>
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    <canvas id="particles"></canvas>
+
+    <!-- NAVIGATION -->
+    <nav class="modern-nav">
+        <div class="nav-brand">Iguosa Aghahowa</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link active">Home</a></li>
+            <li><a href="skills.html" class="nav-link">Skills</a></li>
+            <li><a href="work.html" class="nav-link">Projects</a></li>
+            <li><a href="learning.html" class="nav-link">Learning</a></li>
+        </ul>
     </nav>
-    
-    <div class="container">
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Iguosa Aghahowa</h1>
+            <div class="role">HCA Assistant @ NHS</div>
+            <div class="goal">// Upgrading career into IT // BSc Computer Science</div>
+            <div class="hero-info">
+                <div class="info-chip">📧 Iguosaaghahowa@yahoo.com</div>
+                <div class="info-chip">📱 07495072722</div>
+                <div class="info-chip">🎓 CS Undergraduate</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section">
+        <h2>Personal Profile</h2>
         <div class="profile-section">
             <div class="profile-text">
-                <h2>Personal Profile</h2>
                 <p>I am a dedicated Computer Science undergraduate currently working as an HCA Assistant with the NHS, while actively upgrading my career into the IT sector. My unique background in healthcare has equipped me with exceptional interpersonal skills, resilience, and a deep understanding of how technology can improve people's lives.</p>
                 
                 <p>My academic journey includes a BSc in Computer Science, where I am building foundational knowledge in programming, databases, and web technologies. I am passionate about leveraging my healthcare experience to contribute to Health Tech solutions.</p>
@@ -36,10 +55,13 @@
                 <p><strong>Phone:</strong> 07495072722</p>
                 <p><strong>GitHub:</strong> <a href="https://olympus.ntu.ac.uk/IguosaAghahowa" target="_blank">IguosaAghahowa</a></p>
             </div>
+            
             <div class="profile-image">
-                <p style="text-align: center; padding: 50px; color: #999;">Professional Headshot<br>(Add your photo here)</p>
+                <img src="profile.jpeg" alt="Iguosa Aghahowa - Professional Headshot">
             </div>
         </div>
-    </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
